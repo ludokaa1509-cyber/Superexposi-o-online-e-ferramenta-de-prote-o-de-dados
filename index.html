@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Cyber Guardian</title>
+<meta name="description" content="Superexposição online e proteção de dados para estudantes."/>
+<meta property="og:title" content="Cyber Guardian"/>
+<meta property="og:description" content="Aprenda a se proteger na internet."/>
+<meta property="og:image" content="assets/og-image.svg"/>
+<link rel="icon" href="assets/favicon.svg" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<canvas id="matrix"></canvas>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="logo"/>
+      <span>Cyber Guardian</span>
+    </div>
+    <div class="links">
+      <a href="#info">O que é</a>
+      <a href="#perigos">Perigos</a>
+      <a href="#protecao">Proteção</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#creditos">Créditos</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1 id="typing"></h1>
+  <p>Tudo que você posta pode ser usado contra você</p>
+  <div class="actions">
+    <button class="btn primary" onclick="scrollToInfo()">Explorar</button>
+    <button class="btn danger" onclick="startDemo()">Simulação de link malicioso</button>
+  </div>
+</header>
+
+<section id="info" class="section">
+  <h2>O que é superexposição?</h2>
+  <p>Expor rotina, localização e dados pessoais na internet sem perceber os riscos.</p>
+</section>
+
+<section id="perigos" class="section grid">
+  <h2>Perigos</h2>
+  <div class="cards">
+    <div class="card">Golpes online</div>
+    <div class="card">Roubo de dados</div>
+    <div class="card">Perda de privacidade</div>
+  </div>
+</section>
+
+<section id="protecao" class="section">
+  <h2>Como se proteger</h2>
+  <ul class="list">
+    <li>Não compartilhar localização em tempo real</li>
+    <li>Conta privada</li>
+    <li>Senhas fortes</li>
+    <li>Verificação em 2 etapas</li>
+  </ul>
+</section>
+
+<section id="quiz" class="section quiz">
+  <h2>Quiz</h2>
+  <p>Conta pública?</p>
+  <button onclick="resposta(1)">Sim</button>
+  <button onclick="resposta(0)">Não</button>
+  <p>Posta localização?</p>
+  <button onclick="resposta(1)">Sim</button>
+  <button onclick="resposta(0)">Não</button>
+  <h3 id="resultado"></h3>
+</section>
+
+<section class="section">
+  <div id="terminal"></div>
+</section>
+
+<section id="creditos" class="section">
+  <h2>Créditos</h2>
+  <div class="creditos-container">
+    <p><strong>Lucas Passos</strong><br>
+    Programador Principal: Desenvolveu toda a estrutura do site, lógica em JavaScript, design visual e animações.</p>
+
+    <p><strong>Gabriel Maia</strong><br>
+    Auxiliar Técnico: Testou o sistema, identificou erros, ajudou na otimização e simplificação dos códigos.</p>
+
+    <p><strong>Gustavo Henrique</strong><br>
+    Tester: Responsável pelos testes finais, validação das funcionalidades e experiência do usuário.</p>
+  </div>
+</section>
+
+<div id="loading">ACESSANDO SISTEMA...</div>
+<div id="popup">⚠️ ISSO FOI UMA SIMULAÇÃO ⚠️</div>
+
+<div id="creditosCinema">
+  <div class="conteudo">
+    <h2>Créditos</h2>
+    <p><strong>Lucas Passos</strong> - Programador principal</p>
+    <p><strong>Gabriel Maia</strong> - Auxiliar técnico</p>
+    <p><strong>Gustavo Henrique</strong> - Tester</p>
+  </div>
+</div>
+
+<audio id="hackSound" src="assets/type.wav"></audio>
+
+<footer>
+  <p>Cyber Guardian © 2026</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
